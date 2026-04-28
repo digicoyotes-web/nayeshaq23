@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Nayesha Healthcare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #0ea5e9;
+            --navy: #0f172a;
+            --slate: #64748b;
+            --light-bg: #f8fafc;
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--navy);
+            line-height: 1.8;
+        }
+
+        /* --- Header --- */
+        .top-info {
+            background: var(--navy);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+        .navbar {
+            padding: 1.2rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            background: white;
+        }
+        .navbar-brand { font-weight: 800; font-size: 1.6rem; }
+
+        /* --- Hero --- */
+        .hero-section {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* --- Utility Classes --- */
+        .section-padding { padding: 90px 0; }
+        .tagline {
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        /* --- Cards --- */
+        .feature-box {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border-color: var(--primary-blue);
+        }
+
+        .pillar-card {
+            padding: 35px;
+            border-radius: 24px;
+            color: white;
+            height: 100%;
+        }
+
+        /* --- Team --- */
+        .member-img {
+            border-radius: 30px;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--navy);
+            color: #94a3b8;
+            padding: 80px 0 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-info d-none d-md-block">
+        <div class="container d-flex justify-content-between">
+            <div><i class="fas fa-envelope me-2"></i> info@nayesha.com</div>
+            <div><i class="fas fa-phone-alt me-2"></i> +91 8454831188</div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">NAYESHA<span class="text-primary">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active text-primary" href="#">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Achievements</a></li>
+                    <li class="nav-item ms-lg-4"><a class="btn btn-primary rounded-pill px-4 shadow-sm" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bolder mb-3">About Us</h1>
+            <p class="lead opacity-75">With 10+ Years of Experience in Hospital Management</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1000" class="img-fluid rounded-4 shadow-lg" alt="Hospital Management">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <span class="tagline">About Company</span>
+                    <h2 class="fw-bold mb-4">A Futuristic Hospital Management Consultancy</h2>
+                    <p>We are one of the few companies in India with accreditation. Nayesha entails <strong>SMART hospital solutions</strong> through technology-led innovation.</p>
+                    <p>Our approach includes green buildings, state-of-the-art automation, ergonomically designed hospital rooms, furniture, and facilities. We ensure architectural and engineering excellence alongside optimal utilization of resources with built-in cost-saving features.</p>
+                    <p>Nayesha’s bespoke software solutions ensure seamless operations for the hospital and a hassle-free experience for the patients, strengthening hospital goodwill and efficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container text-center">
+            <span class="tagline">Why Choose Us</span>
+            <h2 class="fw-bold mb-5">Generation Next SMART Solutions</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-microchip fa-3x text-primary mb-4"></i>
+                        <h6 class="fw-bold">Advanced Technology</h6>
+                        <p class="small text-muted mb-0">Economically viable, scalable, and cost-effective SMART Solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-hospital-user fa-3x text-primary mb-4"></i>
+                        <h6 class="fw-bold">NABH Accreditation</h6>
+                        <p class="small text-muted mb-0">World-class patient care infrastructure built as per NABH norms.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-map-marked-alt fa-3x text-primary mb-4"></i>
+                        <h6 class="fw-bold">PAN India Reach</h6>
+                        <p class="small text-muted mb-0">100% dedicated services offered across the entire country.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-box">
+                        <i class="fas fa-check-double fa-3x text-primary mb-4"></i>
+                        <h6 class="fw-bold">Full Documentation</h6>
+                        <p class="small text-muted mb-0">On-time completion of projects with comprehensive documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="pillar-card bg-primary">
+                        <h4 class="fw-bold mb-3">VISION</h4>
+                        <p class="small">To provide quality services that exceed the expectations of our esteemed clients.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="pillar-card" style="background: #0f172a;">
+                        <h4 class="fw-bold mb-3">MISSION</h4>
+                        <p class="small">To build long-term relationships and provide exceptional quality consulting services.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="pillar-card bg-success">
+                        <h4 class="fw-bold mb-3">CORE VALUES</h4>
+                        <p class="small">Treating clients with respect, honesty, integrity, and business ethics.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="pillar-card bg-info">
+                        <h4 class="fw-bold mb-3">PURPOSE</h4>
+                        <p class="small">To be a leader by providing SMART hospital solutions for better patient care.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container text-center">
+            <span class="tagline">Our Leaders</span>
+            <h2 class="fw-bold mb-5">Our Experienced Team</h2>
+            <div class="row g-5 justify-content-center">
+                <div class="col-md-5 col-lg-4">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=500" class="member-img shadow" alt="Adam Clinton">
+                    <h4 class="fw-bold mb-1">Adam Clinton</h4>
+                    <span class="text-primary fw-bold text-uppercase small">Ceo & Founder</span>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=500" class="member-img shadow" alt="Homer Donnie">
+                    <h4 class="fw-bold mb-1">Homer Donnie</h4>
+                    <span class="text-primary fw-bold text-uppercase small">Managing Director</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <div class="col-lg-6">
+                    <h2 class="text-white fw-bold mb-4">Transform Healthcare - Partner with Nayesha!</h2>
+                    <p>Ready to elevate your healthcare institution with SMART solutions?</p>
+                    <a href="#" class="btn btn-primary btn-lg rounded-pill px-5 mt-3">Get Started</a>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <h5 class="text-white mb-4">Contact Details</h5>
+                    <p class="mb-1">Email: info@nayesha.com</p>
+                    <p class="mb-1">Phone: +91 8454831188</p>
+                    <p>Offering 100% Dedicated Services PAN India</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center pt-4 small">
+                &copy; 2024 Nayesha Healthcare Pvt. Ltd. All hospital management services at a one-stop shop.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

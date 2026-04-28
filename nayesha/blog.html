@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayesha Healthcare | Blog & Updates</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        /* --- Original Styling & Root Variables --- */
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #003d80;
+            --accent-light: #f0f7ff;
+            --accent-red: #d9534f;
+        }
+        body { font-family: 'Open Sans', sans-serif; background-color: #f8f9fa; }
+         .text-brand { color: #007eca !important; }
+        .bg-brand { background-color: #007eca !important; }
+        body { font-family: 'Open Sans', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            padding: 120px 0 80px;
+        }
+        .section-padding { padding: 80px 0; }
+        .navbar-brand { font-weight: 800; color: #007eca; letter-spacing: -1px; }
+        .btn-primary { background-color: #007eca; border: none; padding: 12px 30px; border-radius: 8px; }
+        /* Parent submenu */
+.dropdown-submenu{
+position:relative;
+}
+
+/* Submenu positioning */
+.dropdown-submenu > .dropdown-menu{
+position:absolute;
+top:0;
+left:100%;
+margin-top:0;
+margin-left:0.1rem;
+display:none;
+border-radius:6px;
+}
+
+/* Show submenu smoothly */
+.dropdown-submenu:hover > .dropdown-menu{
+display:block;
+}
+
+/* Arrow icon for submenu 
+.dropdown-submenu > .dropdown-toggle::after{
+content:"\f105";
+font-family:"Font Awesome 6 Free";
+font-weight:900;
+border:none;
+float:right;
+margin-top:4px;
+}*/
+
+/* Prevent submenu overlap */
+.dropdown-menu li{
+position:relative;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover{
+background:#f8f9fa;
+padding-left:18px;
+transition:0.3s;
+}
+.contact-btn{
+background:#007eca;
+color:#fff;
+padding:10px 20px;
+border-radius:10px;
+font-weight:600;
+border:none;
+}
+
+.contact-btn:hover{
+background:#007eca;
+}
+        /* --- Modern Blog Card Section (Single Line Layout) --- */
+        .blog-section { padding: 80px 0; background-color: #ffffff; }
+
+        .blog-card {
+            border: none;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 50, 100, 0.05);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 50, 100, 0.1);
+        }
+
+        .blog-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .blog-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .blog-card:hover .blog-img-wrapper img {
+            transform: scale(1.1);
+        }
+
+        .date-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #007eca;
+            color: white;
+            padding: 5px 15px;
+            font-size: 12px;
+            border-radius: 50px;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category-text {
+            color: #c5161d;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-body h5 {
+            color: #003d80;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-size: 1.15rem;
+        }
+
+        .text-muted.small {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .read-more-btn {
+            color: #007eca;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .read-more-btn:hover {
+            color: #c5161d;
+            padding-left: 5px;
+        }
+
+        /* Footer Styling */
+        footer { background: #0a192f; color: white; padding: 60px 0 20px; }
+        footer a { color: rgba(255,255,255,0.6); transition: 0.3s; text-decoration: none; }
+        footer a:hover { color: white; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+          <style>
+    .logo{
+          height: 55px;
+
+    }
+</style>
+        <!-- Logo Image -->
+        <a class="navbar-brand" href="#">
+<img src="Trust & Legacy Focus.webp" class="logo">
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="planning.html">Hospital Planning & Designing</a></li>
+                        <li><a class="dropdown-item" href="manage.html">Hospital Management Outsourcing</a></li>
+                        <li><a class="dropdown-item" href="acc.html">Accrediations</a></li>
+                       
+                    </ul>
+                </li>
+              
+  <!-- achievemnt DROPDOWN -->
+<li class="nav-item dropdown">
+
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+Achievement
+</a>
+
+<ul class="dropdown-menu shadow border-0">
+ <li><a class="dropdown-item" href="achiev.html">Achievement</a></li>
+<!-- FIRST NESTED -->
+<li class="dropdown-submenu">
+    
+<a class="dropdown-item dropdown-toggle" href="#">Latest Projects</a>
+
+<ul class="dropdown-menu">
+              
+                <li><a class="dropdown-item" href="revival-hospital-thane.html">Revival Hospital, Thane</a></li>
+                <li><a class="dropdown-item" href="dhule-clinic.html">Dhule Clinic</a></li>
+</ul>
+</li>
+
+<!-- SECOND NESTED -->
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#">Ongoing-Project</a>
+
+<ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="shree-hospital-karad.html">Shree Hospital, Karad</a></li>
+                <li><a class="dropdown-item" href="new-life-hospital.html">New Life Hospital</a></li>
+                <li><a class="dropdown-item" href="shree-swami-samarth.html">Shree Swami Samarth Prathishthan</a></li>
+                <li><a class="dropdown-item" href="lions-club-alibaug.html">Lions Club Alibaug</a></li>
+                <li><a class="dropdown-item" href="act-raj-hospital-parali.html">ACT Raj Hospital,Parali</a></li>
+                
+</ul>
+</li>
+
+
+</ul>
+</li>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+
+                  
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link active  text-brand" href="blog.html">Blog</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <!-- Contact Button -->
+<li><button class="btn contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Book Appointment
+</button></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Contact Popup Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" placeholder="Enter phone number">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+    <section class="blog-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h6 style="color: #c5161d; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">Latest News & Updates</h6>
+            <h2 class="display-6 fw-bold" style="color: black;">Our Recent Blog Posts</h2>
+            <div style="width: 50px; height: 3px; background: #c5161d; margin: 15px auto;"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <span class="date-badge">26 Sept 2024</span>
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=500" alt="NABH Prep">
+                    </div>
+                    <div class="card-body">
+                        <span class="category-text">NABH Guide</span>
+                        <h5>Are you preparing for NABH Accreditation the wrong way?</h5>
+                        <p class="text-muted small">Learn the systematic approach to ensure your hospital standards meet global guidelines effectively.</p>
+                        <a href="blog1.html" class="read-more-btn">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <span class="date-badge">04 Sept 2024</span>
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=500" alt="Consultancy">
+                    </div>
+                    <div class="card-body">
+                        <span class="category-text">Consultancy</span>
+                        <h5>How far can your hospital go without an NABH Accreditation?</h5>
+                        <p class="text-muted small">Understanding the critical importance of accreditation for patient safety and long-term care quality.</p>
+                        <a href="blog2.html" class="read-more-btn">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <span class="date-badge">26 Sept 2024</span>
+                        <img src="https://gbdmagazine.com/wp-content/uploads/2018/02/Exterior-View-Lucile-Packard-Childrens-Hospital-e1518625255986.jpg" alt="Hospital Design">
+                    </div>
+                    <div class="card-body">
+                        <span class="category-text">Hospital Design</span>
+                        <h5>How to create patient-friendly hospital using NABH guidelines?</h5>
+                        <p class="text-muted small">Steps to integrate patient comfort with strict safety standards for a better healthcare environment.</p>
+                        <a href="blog3.html" class="read-more-btn">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <span class="date-badge">12 Oct 2024</span>
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500" alt="Training">
+                    </div>
+                    <div class="card-body">
+                        <span class="category-text">Training</span>
+                        <h5>Learn how to deliver exceptional patient care with our Training Module</h5>
+                        <p class="text-muted small">Master the art of service excellence and improve patient satisfaction scores across all departments.</p>
+                        <a href="blog4.html" class="read-more-btn">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <span class="date-badge">20 Oct 2024</span>
+                        <img src="data:image/jpeg;base64,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" alt="Recruitment">
+                    </div>
+                    <div class="card-body">
+                        <span class="category-text">Recruitment</span>
+                        <h5>Are you a hospital with 200 to 300 beds looking for better recruitment?</h5>
+                        <p class="text-muted small">Specialized strategies for large-scale hospitals to attract and retain top-tier medical talent.</p>
+                        <a href="blog5.html" class="read-more-btn">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="blog-card">
+                    <div class="blog-img-wrapper">
+                        <span class="date-badge">01 Nov 2024</span>
+                        <img src="https://publichealth.tulane.edu/wp-content/uploads/sites/3/2024/04/healthcare-finance-1024x673.jpg" alt="Finance">
+                    </div>
+                    <div class="card-body">
+                        <span class="category-text">Finance</span>
+                        <h5>Unlock the full potential of your hospital’s finances today</h5>
+                        <p class="text-muted small">Optimize your revenue cycle and reduce operational costs without compromising on care quality.</p>
+                        <a href="blog6.html" class="read-more-btn">Read More <i class="bi bi-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="blog.html" class="btn  px-5 py-2 fw-bold" style="border-radius: 50px; color: white;">View All Stories</a>
+        </div><style>.btn{background: #007eca;}</style>
+    </div>
+</section>
+
+   <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="footer-logo mb-3">
+                      <div class="footer-logo-wrapper" style="display: flex; align-items: center; margin-bottom: 20px; gap: 10px;">
+          <!-- Image Tag: Yahan apni logo file ka path daalein -->
+          <img src="Trust & Legacy Focus.webp" alt="nayesha Logo" style="height: 50px; width: auto;">
+          <div class="logo-text" style="font-size: 24px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+            
+          </div>
+        </div>
+
+                </div>
+                
+                    
+                    <p class="text-white-50">Transforming healthcare infrastructure and management with 10+ years of domain expertise.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled text-secondary-emphasis">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hospital Designing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">NABH Accreditation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">HR Recruitment</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5><style></style>
+                    <p class="mb-1 text-white-50"><i class="bi bi-geo-alt me-2"></i> Office 14, 2nd Floor, Hiranandani Crystal Plaza,<br> Plot no 18/27, Sector 07, Kharghar, Panvel, Maharashtra 410210</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-envelope me-2"></i> info@nayesha.com</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-telephone me-2"></i> +91 8454831188</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50 pt-3"><style>.text-center small{color: white;}</style>
+                <small>© 2026 Nayesha Healthcare Pvt. Ltd. </small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

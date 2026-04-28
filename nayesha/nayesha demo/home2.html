@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayesha Healthcare | Quality Care With Personal Touch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #003d80;
+            --accent-light: #e7f1ff;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            padding: 120px 0 80px;
+        }
+        .section-padding { padding: 80px 0; }
+        .navbar-brand { font-weight: 800; color: var(--primary-blue); letter-spacing: -1px; }
+        .btn-primary { background-color: var(--primary-blue); border: none; padding: 12px 30px; border-radius: 8px; }
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-light);
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+         /* Projects Section */
+        .project-item { position: relative; overflow: hidden; border-radius: 15px; cursor: pointer; }
+        .project-img { width: 100%; height: 300px; object-fit: cover; transition: transform 0.5s ease; }
+        .project-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 86, 179, 0.85); color: white;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            opacity: 0; transition: opacity 0.3s ease; padding: 20px; text-align: center;
+        }
+        .project-item:hover .project-overlay { opacity: 1; }
+        .project-item:hover .project-img { transform: scale(1.1); }
+        /* Clients Section */
+        .client-logo-wrapper {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+        }
+        .client-logo-wrapper:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+        .client-logo { max-width: 150px; max-height: 60px; object-fit: contain; }
+
+        .stats-box { background: var(--primary-blue); color: white; border-radius: 20px; padding: 40px; }
+        .testimonial-card { font-style: italic; border-left: 5px solid var(--primary-blue); background: #f8f9fa; padding: 20px; }
+        .blog-card img { border-radius: 10px; height: 200px; object-fit: cover; }
+        footer { background: #0a192f; color: white; padding: 60px 0 20px; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="#">Nayesha <span class="text-dark">Healthcare</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="tel:+918454831188">+91 8454831188</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-gradient">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-subtle text-primary mb-3 px-3 py-2 rounded-pill">Transforming Healthcare Experience</span>
+                    <h1 class="display-3 fw-bold mb-4">Quality Care With <span class="text-primary">Personal Touch</span></h1>
+                    <p class="lead text-muted mb-5">Unlock the full potential of your hospital's finances and achieve operational excellence with our Training Service Excellence Module.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#" class="btn btn-primary btn-lg">Get Started Now</a>
+                        <a href="#" class="btn btn-outline-dark btn-lg">Free Consultation</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000" class="img-fluid rounded-4 shadow-lg" alt="Healthcare Excellence">
+                        <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-white rounded-3 shadow-sm d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-3 me-2"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">NABH/NABL</h6>
+                                <small class="text-muted">Accreditation Support</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow" alt="Doctor Consultation">
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="text-primary fw-bold text-uppercase ls-2">Welcome to Nayesha</h6>
+                    <h2 class="display-5 fw-bold mb-4">10+ Years of Healthcare Excellence</h2>
+                    <p class="mb-4">Nayesha Healthcare Pvt. Ltd. (NHPL) is the brainchild of <strong>Dr. Vitthal Kandekar</strong>, a management consultant and doctor committed to putting "Patient First."</p>
+                    <ul class="list-unstyled row g-3 mb-4">
+                        <li class="col-md-6"><i class="bi bi-patch-check-fill text-primary me-2"></i> MBA in Financial Management</li>
+                        <li class="col-md-6"><i class="bi bi-patch-check-fill text-primary me-2"></i> Hospital Management Expert</li>
+                        <li class="col-md-6"><i class="bi bi-patch-check-fill text-primary me-2"></i> Quality Tools (TQM, 5S, ISO)</li>
+                        <li class="col-md-6"><i class="bi bi-patch-check-fill text-primary me-2"></i> 6-Sigma Implementation</li>
+                    </ul>
+                    <a href="#" class="btn btn-dark">Read More Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-5">Our Expert Services</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-building"></i></div>
+                        <h4 class="fw-bold">Hospital Design</h4>
+                        <p class="text-muted">Leading project management offering smart hospital solutions and state-of-the-art automation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-gear-wide-connected"></i></div>
+                        <h4 class="fw-bold">Management Outsourcing</h4>
+                        <p class="text-muted">Ensuring smooth operations and increased profitability through professional management.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-shield-check"></i></div>
+                        <h4 class="fw-bold">Accreditation</h4>
+                        <p class="text-muted">Relieving the stress of NABH and NABL accreditation so you can focus on patient care.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-people"></i></div>
+                        <h4 class="fw-bold">HR & Training</h4>
+                        <p class="text-muted">Specialized recruitment and training for hospitals with 200 to 300 beds.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-cart-check"></i></div>
+                        <h4 class="fw-bold">Equipment Procurement</h4>
+                        <p class="text-muted">Strategic sourcing and cost management for all medical infrastructure needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card service-card h-100 p-4">
+                        <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h4 class="fw-bold">Marketing & Branding</h4>
+                        <p class="text-muted">Enhancing visibility and patient satisfaction through professional branding strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Portfolio</h6>
+                <h2 class="display-5 fw-bold">Our Latest Projects</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce2?auto=format&fit=crop&q=80&w=600" class="project-img" alt="Alibag Project">
+                        <div class="project-overlay">
+                            <h5 class="fw-bold">Alibag Facility</h5>
+                            <p>Pre-Operational Setup</p>
+                            <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1517120467506-d52292f7067d?auto=format&fit=crop&q=80&w=600" class="project-img" alt="Thane Project">
+                        <div class="project-overlay">
+                            <h5 class="fw-bold">Thane Hospital</h5>
+                            <p>NABH Accreditation Project</p>
+                            <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&q=80&w=600" class="project-img" alt="Dhule Project">
+                        <div class="project-overlay">
+                            <h5 class="fw-bold">Dhule Clinic</h5>
+                            <p>Infrastructure Planning</p>
+                            <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="clients" class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Trusted By 50+ Healthcare Providers</h2>
+                <p class="text-muted">Join our network of successful hospitals and clinics</p>
+            </div>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 align-items-center justify-content-center">
+                <div class="col"><div class="client-logo-wrapper"><img src="https://via.placeholder.com/150x60?text=Care+32" class="client-logo" alt="Care 32"></div></div>
+                <div class="col"><div class="client-logo-wrapper"><img src="https://via.placeholder.com/150x60?text=Amrutha" class="client-logo" alt="Amrutha"></div></div>
+                <div class="col"><div class="client-logo-wrapper"><img src="https://via.placeholder.com/150x60?text=Lifeline" class="client-logo" alt="Lifeline"></div></div>
+                <div class="col"><div class="client-logo-wrapper"><img src="https://via.placeholder.com/150x60?text=Thriven" class="client-logo" alt="Thriven"></div></div>
+                <div class="col"><div class="client-logo-wrapper"><img src="https://via.placeholder.com/150x60?text=Suraj" class="client-logo" alt="Suraj"></div></div>
+                <div class="col"><div class="client-logo-wrapper"><img src="https://via.placeholder.com/150x60?text=Sparsh" class="client-logo" alt="Sparsh"></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center fw-bold mb-5">Frequently Asked Questions</h2>
+                    <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Can you handle the entire planning process of a hospital?</button></h2>
+                            <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Yes, we handle everything from start to finish with our skilled architectural and technical team.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Do you work outside Maharashtra?</button></h2>
+                            <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Yes, we work on projects across India, including Tier 2 and Tier 3 cities.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Can you improve our hospital's profitability?</button></h2>
+                            <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Definitely. We ensure smooth operations and revenue growth through expert management and quality improvement.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Words From Our Customers</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card rounded-4">
+                        <p>"You bring tremendous value. We generated more leads in the last 45 days than the last 2 years!"</p>
+                        <h6 class="mb-0 fw-bold">Felix Everard</h6>
+                        <small class="text-muted">HR, Blue Soft Sol</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card rounded-4">
+                        <p>"Everyone has been great to work with. You're a great partner for our company."</p>
+                        <h6 class="mb-0 fw-bold">Boris Elbert</h6>
+                        <small class="text-muted">Green Tech</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card rounded-4">
+                        <p>"Refined our marketing plans and gave us truly innovative ideas for growth."</p>
+                        <h6 class="mb-0 fw-bold">Ivor Herbert</h6>
+                        <small class="text-muted">Manager, Airlines</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h6 class="text-primary fw-bold">LATEST NEWS</h6>
+                    <h2 class="fw-bold mb-0">Our Healthcare Blog</h2>
+                </div>
+                <a href="#" class="btn btn-outline-primary">View All Posts</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 blog-card">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="NABH">
+                        <div class="card-body px-0">
+                            <small class="text-primary fw-bold">26 Sept 2024</small>
+                            <h5 class="fw-bold mt-2">Are you preparing for NABH Accreditation the wrong way?</h5>
+                            <a href="#" class="text-decoration-none fw-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 blog-card">
+                        <img src="https://images.unsplash.com/photo-1538108190935-61bb76c58464?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Patient Friendly">
+                        <div class="card-body px-0">
+                            <small class="text-primary fw-bold">04 Sept 2024</small>
+                            <h5 class="fw-bold mt-2">How to create a patient-friendly hospital using NABH guidelines?</h5>
+                            <a href="#" class="text-decoration-none fw-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 blog-card">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Hospital Management">
+                        <div class="card-body px-0">
+                            <small class="text-primary fw-bold">26 Sept 2024</small>
+                            <h5 class="fw-bold mt-2">How far can your hospital go without NABH Accreditation?</h5>
+                            <a href="#" class="text-decoration-none fw-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <h3 class="fw-bold mb-4">Nayesha Healthcare</h3>
+                    <p class="text-secondary-emphasis">Transforming healthcare infrastructure and management with 10+ years of domain expertise.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled text-secondary-emphasis">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hospital Designing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">NABH Accreditation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">HR Recruitment</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <p class="mb-1 text-white-50"><i class="bi bi-geo-alt me-2"></i> Maharashtra, India</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-envelope me-2"></i> info@nayesha.com</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-telephone me-2"></i> +91 8454831188</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50 pt-3">
+                <small>© 2026 Nayesha Healthcare Pvt. Ltd. | Quality Care With Personal Touch</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

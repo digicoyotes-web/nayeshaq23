@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayesha Healthcare | Smart Hospital Solutions</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0ea5e9;
+            --primary-dark: #0284c7;
+            --dark: #0f172a;
+            --accent: #22c55e;
+            --glass: rgba(255, 255, 255, 0.8);
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            color: var(--dark);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* --- Animated Background Elements --- */
+        .bg-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, rgba(255,255,255,0) 70%);
+            z-index: -1;
+            filter: blur(50px);
+            border-radius: 50%;
+        }
+
+        /* --- Navigation --- */
+        .navbar {
+            padding: 25px 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .navbar.scrolled {
+            padding: 15px 0;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .navbar-brand { font-weight: 800; font-size: 1.6rem; letter-spacing: -1px; }
+
+        /* --- Hero Section --- */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        .hero-visual {
+            position: relative;
+            perspective: 1000px;
+        }
+        .main-hero-img {
+            border-radius: 40px;
+            transform: rotateY(-10deg) rotateX(5deg);
+            box-shadow: 30px 30px 60px rgba(0,0,0,0.1);
+            transition: 0.5s;
+        }
+        .main-hero-img:hover {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+
+        /* --- Service Cards with Glow --- */
+        .card-service {
+            background: white;
+            border: 1px solid #f1f5f9;
+            border-radius: 30px;
+            padding: 45px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .card-service:hover {
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
+            transform: translateY(-10px);
+        }
+        .card-service i {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        /* --- Stats/About Section --- */
+        .stats-grid {
+            background: var(--dark);
+            border-radius: 50px;
+            padding: 80px 40px;
+            color: white;
+            margin-top: -100px;
+            position: relative;
+            z-index: 2;
+        }
+        .stat-item h2 { font-size: 3.5rem; font-weight: 800; color: var(--primary); }
+
+        /* --- FAQ Accordion --- */
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            background: #f8fafc;
+            border-radius: 20px !important;
+            overflow: hidden;
+        }
+        .accordion-button {
+            background: #f8fafc;
+            font-weight: 700;
+            padding: 20px;
+        }
+        .accordion-button:not(.collapsed) {
+            background: #f0f9ff;
+            color: var(--primary);
+        }
+
+        /* --- Custom Buttons --- */
+        .btn-custom {
+            padding: 16px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+        .btn-primary-custom {
+            background: var(--primary);
+            color: white;
+            border: none;
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3);
+        }
+        .btn-primary-custom:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 991px) {
+            .hero-section { text-align: center; padding-bottom: 100px; }
+            .stats-grid { margin-top: 50px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-blob" style="top: -100px; right: -100px;"></div>
+    <div class="bg-blob" style="top: 40%; left: -200px; background: rgba(34, 197, 94, 0.1);"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-dark" href="#">NAYESHA<span class="text-primary">.</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Our Vision</a></li>
+                    <li class="nav-item"><a class="nav-link ms-lg-4 btn-custom btn-primary-custom py-2" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <span class="badge bg-soft-success text-success mb-3 p-2 px-3 rounded-pill" style="background: #dcfce7;">
+                        <i class="fas fa-sparkles me-2"></i>THE FUTURE OF HEALTHCARE
+                    </span>
+                    <h1>SMART <br><span class="text-primary" id="typed-text"></span></h1>
+                    <p class="lead text-muted mb-5 pe-lg-5">
+                        We blend 10+ years of expertise with state-of-the-art automation to give healthcare investors a massive competitive edge.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#services" class="btn btn-custom btn-primary-custom">View Solutions</a>
+                        <a href="#contact" class="btn btn-custom btn-outline-dark">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="hero-visual">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200" alt="Futuristic Hospital" class="img-fluid main-hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container pb-5" data-aos="fade-up">
+        <div class="stats-grid shadow-lg">
+            <div class="row text-center g-4">
+                <div class="col-md-4 stat-item">
+                    <h2>10+</h2>
+                    <p class="text-uppercase opacity-75 small fw-bold">Years of Excellence</p>
+                </div>
+                <div class="col-md-4 stat-item">
+                    <h2>100%</h2>
+                    <p class="text-uppercase opacity-75 small fw-bold">NABH Compliance</p>
+                </div>
+                <div class="col-md-4 stat-item">
+                    <h2>PAN</h2>
+                    <p class="text-uppercase opacity-75 small fw-bold">India Presence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5 align-items-end" data-aos="fade-up">
+                <div class="col-lg-6">
+                    <h6 class="text-primary fw-bold text-uppercase">What we do</h6>
+                    <h2 class="display-5 fw-bold">Our Core Expertise</h2>
+                </div>
+                <div class="col-lg-6">
+                    <p class="text-muted">Nayesha entails SMART hospital solutions through technology-led innovation, focusing on green buildings and architectural excellence.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-service">
+                        <i class="fas fa-layer-group"></i>
+                        <h4 class="fw-bold">Turnkey Project</h4>
+                        <p class="text-muted">From feasibility studies to site analysis and selection. We ensure optimal ROI for healthcare investors.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-service">
+                        <i class="fas fa-microchip"></i>
+                        <h4 class="fw-bold">Smart Automation</h4>
+                        <p class="text-muted">Advanced automation for inventory, manpower, and billing. Seamless operations at reduced costs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-service">
+                        <i class="fas fa-user-shield"></i>
+                        <h4 class="fw-bold">Accreditation</h4>
+                        <p class="text-muted">We handle every procedure needed for NABH accreditation, ensuring your hospital is world-class.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .team-container {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+        .team-card-static {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            text-align: center;
+            height: 100%;
+        }
+        .profile-image-container {
+            position: relative;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        .profile-image-container img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 24px; /* Sophisticated squircle shape */
+            border: 4px solid #f8fafc;
+            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+        }
+        .profile-image-container::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 40px;
+            height: 40px;
+            background: var(--accent-blue);
+            border-radius: 12px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+        .member-info h5 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--deep-navy);
+            margin-bottom: 4px;
+        }
+        .member-info .role-text {
+            color: var(--accent-blue);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .member-bio {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        .team-divider {
+            width: 50px;
+            height: 3px;
+            background: var(--accent-blue);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+    </style>
+
+    <section id="team" class="team-container">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="hero-tag">THE LEADERSHIP</span>
+                <h2 class="fw-bold mt-2">Led by Visionaries</h2>
+                <p class="text-muted mx-auto" style="max-width: 600px;">Our leadership team combines clinical expertise with technological innovation to redefine hospital management.</p>
+            </div>
+
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card-static">
+                        <div class="profile-image-container">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Adam Clinton">
+                        </div>
+                        <div class="member-info">
+                            <h5>Adam Clinton</h5>
+                            <span class="role-text">CEO & Founder</span>
+                            <div class="team-divider"></div>
+                            <p class="member-bio">Visionary leader focused on implementing SMART hospital solutions and technology-driven infrastructure across India.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card-static">
+                        <div class="profile-image-container">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400" alt="Homer Donnie">
+                        </div>
+                        <div class="member-info">
+                            <h5>Homer Donnie</h5>
+                            <span class="role-text">Managing Director</span>
+                            <div class="team-divider"></div>
+                            <p class="member-bio">Expert in operational efficiency and project management, ensuring excellence in patient care and infrastructure ROI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="pt-5 border-top">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4">NAYESHA<span class="text-primary">.</span></h4>
+                    <p class="text-muted mb-4">Providing cutting-edge hospital management solutions with a "Patient First" commitment across PAN India.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Detail</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-phone text-primary me-3"></i> +91 8454831188</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-envelope text-primary me-3"></i> info@nayesha.com</li>
+                        <li class="mb-3 d-flex align-items-center"><i class="fas fa-map-marker-alt text-primary me-3"></i> Serving All Over India</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Hospital Setup</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Planning</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled small">
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Marketing</a></li>
+                                <li class="mb-2"><a href="#" class="text-decoration-none text-muted">Operations</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-4 border-top">
+                <p class="small text-muted mb-0">&copy; 2024 Nayesha Healthcare Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <script>
+        // Initialize Animations
+        AOS.init({ duration: 1000, once: true });
+
+        // Navbar Scroll Effect
+        window.onscroll = function() {
+            const nav = document.getElementById('mainNav');
+            if (window.pageYOffset > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        };
+
+        // Typed Text Animation
+        var typed = new Typed('#typed-text', {
+            strings: ['Hospital Solutions.', 'Management Experts.', 'Futuristic Care.'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
+</body>
+</html>

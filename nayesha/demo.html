@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements | Nayesha Healthcare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Color Palette & Base Styles from about.html */
+        :root {
+            --primary-blue: #007eca;    
+            --secondary-blue: #0056b3;
+            --accent-red: #c5161d;
+            --dark-navy: #0a192f;
+            --overlay-blue: rgba(0, 102, 153, 0.85);
+        }
+        
+        body { font-family: 'Open Sans', sans-serif; color: #333; }
+        .text-brand { color: var(--primary-blue) !important; }
+        .bg-brand { background-color: var(--primary-blue) !important; }
+        
+        /* Navigation Styles */
+        .navbar-brand img { height: 55px; }
+        .contact-btn {
+            background: var(--primary-blue);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+        }
+        .dropdown-submenu { position: relative; }
+        .dropdown-submenu > .dropdown-menu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-top: 0;
+            display: none;
+        }
+        .dropdown-submenu:hover > .dropdown-menu { display: block; }
+
+        /* Hero Section */
+        .achievements-hero {
+            background: linear-gradient(var(--overlay-blue), var(--overlay-blue)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Achievement Cards */
+        .achievement-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            height: 100%;
+            background: #fff;
+            outline: 2px solid var(--accent-red);
+            outline-offset: -10px;
+        }
+        .achievement-card:hover { transform: translateY(-10px); }
+        .achievement-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .achievement-body { padding: 30px; }
+        .section-tag {
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styles */
+        footer { background: var(--dark-navy); color: white; padding: 60px 0 20px; }
+        .footer-logo img { height: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Trust & Legacy Focus.webp" alt="Nayesha Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="planning.html">Hospital Planning & Designing</a></li>
+                            <li><a class="dropdown-item" href="manage.html">Hospital Management Outsourcing</a></li>
+                            <li><a class="dropdown-item" href="acc.html">Accreditations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active text-brand" href="#" data-bs-toggle="dropdown">Achievement</a>
+                        <ul class="dropdown-menu shadow border-0">
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Latest Projects</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="shree-hospital-karad.html">Shree Hospital, Karad</a></li>
+                                    <li><a class="dropdown-item" href="revival-hospital-thane.html">Revival Hospital, Thane</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li><button class="btn contact-btn ms-lg-3" data-bs-toggle="modal" data-bs-target="#contactModal">Book Appointment</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="achievements-hero">
+        <div class="container">
+            <span class="text-uppercase fw-bold" style="letter-spacing: 3px;">Our Milestones</span>
+            <h1 class="display-3 fw-bolder">Achievements</h1>
+        </div>
+    </header>
+
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row g-4">
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="achievement-card">
+                        <img src="https://via.placeholder.com/400x250?text=Secure+Path+Honour" class="achievement-img" alt="Secure Path Laboratories">
+                        <div class="achievement-body">
+                            <span class="section-tag">Recognition</span>
+                            <h4 class="fw-bold">Secure Path Laboratories</h4>
+                            <p>Honoured by <strong>Dr. Deoyani Kalekar</strong> for prompt and satisfactory services provided by Nayesha Healthcare Pvt. Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="achievement-card">
+                        <img src="https://via.placeholder.com/400x250?text=Felicitations+Karnataka" class="achievement-img" alt="Felicitations">
+                        <div class="achievement-body">
+                            <span class="section-tag">Felicitation</span>
+                            <h4 class="fw-bold">Rajiv Gandhi Education Society</h4>
+                            <p>A proud moment in Gadag, Karnataka; felicitated in the presence of 36 representatives from 12 Ayurvedic medical colleges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="achievement-card">
+                        <img src="https://via.placeholder.com/400x250?text=Accreditation+Focus" class="achievement-img" alt="Accreditation">
+                        <div class="achievement-body">
+                            <span class="section-tag">Excellence</span>
+                            <h4 class="fw-bold">Hospital Accreditation</h4>
+                            <p>Taking the stress away from accreditation so providers can focus entirely on patient care and clinical excellence.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="footer-logo mb-3">
+                        <img src="Trust & Legacy Focus.webp" alt="Nayesha Logo">
+                    </div>
+                    <p class="text-white-50">Transforming healthcare infrastructure and management with 10+ years of domain expertise.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hospital Designing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">NABH Accreditation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <p class="mb-1 text-white-50"><i class="bi bi-geo-alt me-2"></i> Kharghar, Panvel, Maharashtra 410210</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-envelope me-2"></i> info@nayesha.com</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-telephone me-2"></i> +91 8454831188</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50 pt-3">
+                <small>© 2026 Nayesha Healthcare Pvt. Ltd.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

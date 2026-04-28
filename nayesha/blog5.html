@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Solutions for 200-300 Bed Hospitals | Nayesha Healthcare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* --- Brand Colors from blog.html --- */
+        :root {
+            --brand-blue: #007eca;
+            --brand-dark-blue: #003d80;
+            --brand-red: #c5161d;
+            --light-bg: #f8f9fa;
+            --accent-light: #f0f7ff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #444;
+            background-color: var(--light-bg);
+            line-height: 1.8;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* --- Navbar Styling (Consistent with blog.html) --- */
+        .navbar-brand img { height: 55px; }
+        .nav-link { font-weight: 600; color: #333 !important; }
+        .nav-link.active { color: var(--brand-blue) !important; }
+        .contact-btn { background: var(--brand-blue); color: #fff; padding: 10px 20px; border-radius: 10px; font-weight: 600; border: none; }
+        .contact-btn:hover { background: var(--brand-dark-blue); }
+  /* Parent submenu */
+.dropdown-submenu{
+position:relative;
+}
+
+/* Submenu positioning */
+.dropdown-submenu > .dropdown-menu{
+position:absolute;
+top:0;
+left:100%;
+margin-top:0;
+margin-left:0.1rem;
+display:none;
+border-radius:6px;
+}
+
+/* Show submenu smoothly */
+.dropdown-submenu:hover > .dropdown-menu{
+display:block;
+}
+
+/* Arrow icon for submenu 
+.dropdown-submenu > .dropdown-toggle::after{
+content:"\f105";
+font-family:"Font Awesome 6 Free";
+font-weight:900;
+border:none;
+float:right;
+margin-top:4px;
+}*/
+
+/* Prevent submenu overlap */
+.dropdown-menu li{
+position:relative;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover{
+background:#f8f9fa;
+padding-left:18px;
+transition:0.3s;
+}
+        /* --- Hero Section (blog3 Layout with Brand Colors) --- */
+        .post-hero {
+            background: linear-gradient(rgba(0, 126, 202, 0.9), rgba(0, 61, 128, 0.9)), 
+                        url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        /* --- Content Container (blog3 Style) --- */
+        .blog-container {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            margin-top: -60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            color: var(--brand-dark-blue);
+            border-left: 5px solid var(--brand-red);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+        }
+
+        .icon-box {
+            background: var(--accent-light);
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .icon-box:hover {
+            background: var(--brand-blue);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .icon-box i {
+            font-size: 2.5rem;
+            color: var(--brand-red);
+            margin-bottom: 15px;
+        }
+
+        .icon-box:hover i { color: white; }
+
+        .consultation-box {
+            background: #eef5ff;
+            border-left: 6px solid var(--brand-blue);
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+            margin: 40px 0;
+        }
+
+        /* --- Sidebar Widgets --- */
+        .sidebar-widget {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .bg-brand-blue { background-color: var(--brand-blue) !important; }
+
+        /* --- Footer (Consistent with blog.html) --- */
+        footer { background: #0a192f; color: white; padding: 60px 0 20px; }
+        footer a { color: rgba(255,255,255,0.6); text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: white; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+          <style>
+    .logo{
+          height: 55px;
+
+    }
+</style>
+        <!-- Logo Image -->
+        <a class="navbar-brand" href="#">
+<img src="Trust & Legacy Focus.webp" class="logo">
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link active  text-brand" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="planning.html">Hospital Planning & Designing</a></li>
+                        <li><a class="dropdown-item" href="manage.html">Hospital Management Outsourcing</a></li>
+                        <li><a class="dropdown-item" href="acc.html">Accrediations</a></li>
+                       
+                    </ul>
+                </li>
+              
+  <!-- achievemnt DROPDOWN -->
+<li class="nav-item dropdown">
+
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+Achievement
+</a>
+
+<ul class="dropdown-menu shadow border-0">
+ <li><a class="dropdown-item" href="achiev.html">Achievement</a></li>
+<!-- FIRST NESTED -->
+<li class="dropdown-submenu">
+    
+<a class="dropdown-item dropdown-toggle" href="#">Latest Projects</a>
+
+<ul class="dropdown-menu">
+                
+                <li><a class="dropdown-item" href="revival-hospital-thane.html">Revival Hospital, Thane</a></li>
+                <li><a class="dropdown-item" href="dhule-clinic.html">Dhule Clinic</a></li>
+</ul>
+</li>
+
+<!-- SECOND NESTED -->
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#">Ongoing-Project</a>
+
+<ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="shree-hospital-karad.html">Shree Hospital, Karad</a></li>
+                <li><a class="dropdown-item" href="new-life-hospital.html">New Life Hospital</a></li>
+                <li><a class="dropdown-item" href="shree-swami-samarth.html">Shree Swami Samarth Prathishthan</a></li>
+                <li><a class="dropdown-item" href="lions-club-alibaug.html">Lions Club Alibaug</a></li>
+                <li><a class="dropdown-item" href="act-raj-hospital-parali.html">ACT Raj Hospital,Parali</a></li>
+                
+</ul>
+</li>
+
+
+</ul>
+</li>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+
+                  
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <!-- Contact Button -->
+<li><button class="btn contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Book Appointment
+</button></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--popup-->
+    <!-- Contact Popup Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" placeholder="Enter phone number">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <section class="post-hero">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Are you a hospital with 200 to 300 beds looking to enhance your recruitment?</h1>
+            <p class="lead">Optimizing HR for mid-sized healthcare facilities with 10+ years of expertise.</p>
+        </div>
+    </section>
+
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="blog-container">
+                    <p class="text-muted mb-4">
+                        <i class="far fa-calendar-alt me-2"></i> October 20, 2024 | 
+                        <i class="far fa-user ms-3 me-2"></i> By Nayesha Health care
+                    </p>
+
+                    <p class="lead">Managing a 200 to 300-bed hospital presents unique challenges. Scaling your medical and administrative staff while maintaining a <strong>"Patient First"</strong> philosophy requires a strategic approach to HR Recruitment.</p>
+
+                    <h2 class="section-title">Comprehensive Hiring Solutions</h2>
+                    <div class="row g-4 mt-2 mb-4">
+                        <div class="col-md-4">
+                            <div class="icon-box text-center">
+                                <i class="fas fa-users-gear"></i>
+                                <h6>HR Strategy</h6>
+                                <p class="small text-muted mb-0">Securing experienced consultants for Tier 2 and Tier 3 city projects.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-box text-center">
+                                <i class="fas fa-user-tie"></i>
+                                <h6>Senior Staffing</h6>
+                                <p class="small text-muted mb-0">Hiring leadership proficient in NABH/NABL standards.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="icon-box text-center">
+                                <i class="fas fa-chart-line"></i>
+                                <h6>Excellence</h6>
+                                <p class="small text-muted mb-0">Using TQM and 6-Sigma tools to ensure high-fidelity hiring.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="consultation-box">
+                        <h4 class="fw-bold">Why Nayesha Healthcare?</h4>
+                        <p class="mb-0">Nayesha Healthcare Pvt. Ltd. (NHPL) acts as your project management consultant, offering smart solutions that blend automation with professional management to give you a distinct competitive edge.</p>
+                    </div>
+
+                    <h2 class="section-title">Our Commitment</h2>
+                    <p>At Nayesha, we relieve you of the stress associated with planning, designing, and staffing a modern hospital. Whether you are looking to increase revenue, improve quality, or bring in more satisfied patients, our technical team is ready to assist hospitals across Maharashtra and beyond.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-lg-0 mt-4">
+                <div class="sidebar-widget">
+                    <h5 class="fw-bold mb-3">About the Expert</h5>
+                    <p class="small"><strong>Dr. Vitthal Kandekar</strong>, a management consultant and doctor, leads Nayesha Healthcare with 10+ years of domain expertise.</p>
+                </div>
+
+                <div class="sidebar-widget bg-brand-blue text-white text-center">
+                    <h5 class="fw-bold mb-3 text-white">Free Consultation</h5>
+                    <p class="small mb-4 text-white-50">Ready to enhance your recruitment process today?</p>
+                    <a href="tel:+918454831188" class="btn btn-light w-100 fw-bold rounded-pill shadow-sm">Call Now</a>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h5 class="fw-bold mb-3">Related Topics</h5>
+                    <ul class="list-unstyled small">
+                        <li class="mb-3 border-bottom pb-2"><a href="module.html" class="text-decoration-none text-dark fw-bold">Training Service Excellence Module</a></li>
+                        <li><a href="finances.html" class="text-decoration-none text-dark fw-bold">Unlock Hospital Financial Potential</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="footer-logo-wrapper d-flex align-items-center mb-4 gap-2">
+                        <img src="Trust & Legacy Focus.webp" alt="Nayesha Logo" style="height: 50px;">
+                       
+                    </div>
+                    <p class="text-white-50">Transforming healthcare infrastructure and management with 10+ years of domain expertise.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#">Hospital Designing</a></li>
+                        <li class="mb-2"><a href="#">NABH Accreditation</a></li>
+                        <li class="mb-2"><a href="#">HR Recruitment</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <p class="mb-1 text-white-50 small"><i class="bi bi-geo-alt me-2"></i> Office 14, 2nd Floor, Hiranandani Crystal Plaza, Kharghar, Panvel, Maharashtra 410210</p>
+                    <p class="mb-1 text-white-50 small"><i class="bi bi-envelope me-2"></i> info@nayesha.com</p>
+                    <p class="mb-1 text-white-50 small"><i class="bi bi-telephone me-2"></i> +91 8454831188</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50 pt-3">
+                <small>© 2026 Nayesha Healthcare Pvt. Ltd. | Quality Care With Personal Touch</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
