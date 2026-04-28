@@ -342,7 +342,7 @@ nayesha/
 ## 📞 Support
 
 ### Website Support
-- **Email:** info@nayesha.com
+- **Email:** info@nayesha.in
 - **Phone:** +91 8454831188
 - **Address:** Office 14, 2nd Floor, Hiranandani Crystal Plaza, Plot no 18/27, Sector 07, Kharghar, Panvel, Maharashtra 410210
 
@@ -411,7 +411,7 @@ For any queries or support:
 
 **Nayesha Healthcare Pvt. Ltd.**
 - 🌐 Website: https://yourdomain.com
-- 📧 Email: info@nayesha.com
+- 📧 Email: info@nayesha.in
 - 📱 Phone: +91 8454831188
 - 📍 Location: Kharghar, Navi Mumbai, Maharashtra
 

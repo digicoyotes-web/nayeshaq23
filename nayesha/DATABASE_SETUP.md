@@ -31,7 +31,7 @@
 1. Open `api/submit-contact.php` and `api/submit-vc-consultation.php`
 2. Update the email address on line:
    ```php
-   $to = "info@nayesha.com"; // Change to your email
+   $to = "info@nayesha.in"; // Change to your email
    ```
 3. Configure your server's mail settings (SMTP recommended for production)
 
@@ -144,5 +144,5 @@
 ## Support
 
 For issues or questions:
-- Email: info@nayesha.com
+- Email: info@nayesha.in
 - Phone: +91 8454831188

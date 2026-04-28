@@ -142,7 +142,7 @@
 - Email: support@hostinger.com
 
 ### Website Support
-- Email: info@nayesha.com
+- Email: info@nayesha.in
 - Phone: +91 8454831188
 
 ---

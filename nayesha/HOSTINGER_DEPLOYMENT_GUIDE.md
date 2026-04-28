@@ -164,12 +164,12 @@ private $password = "your_strong_password"; // Your actual password
 
 ### 6.1 Update Email Addresses
 1. Edit `api/submit-contact.php`
-2. Find line 62: `$to = "info@nayesha.com";`
+2. Find line 62: `$to = "info@nayesha.in";`
 3. Change to your actual email: `$to = "your-email@yourdomain.com";`
 4. Save file
 
 5. Edit `api/submit-vc-consultation.php`
-6. Find line 62: `$to = "info@nayesha.com";`
+6. Find line 62: `$to = "info@nayesha.in";`
 7. Change to your actual email
 8. Save file
 
@@ -378,7 +378,7 @@ Deny from all
 - Knowledge Base: https://support.hostinger.com
 
 ### Website Support
-- Email: info@nayesha.com
+- Email: info@nayesha.in
 - Phone: +91 8454831188
 
 ---

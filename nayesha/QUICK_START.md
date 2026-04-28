@@ -110,7 +110,7 @@ Your website is now live at: **https://yourdomain.com**
 
 - 📁 **GitHub:** https://github.com/digicoyotes-web/nayeshaq23
 - 🌐 **Hostinger:** https://www.hostinger.com
-- 📧 **Support:** info@nayesha.com
+- 📧 **Support:** info@nayesha.in
 - 📞 **Phone:** +91 8454831188
 
 ---

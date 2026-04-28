@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($stmt->execute()) {
                 
                 // Send email notification (optional)
-                $to = "info@nayesha.com";
+                $to = "info@nayesha.in";
                 $subject = "New VC Consultation Request - Nayesha Healthcare";
                 $email_message = "New VC consultation request received:\n\n";
                 $email_message .= "Name: " . $full_name . "\n";
@@ -87,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $email_message .= "Preferred Date: " . $preferred_date . "\n";
                 $email_message .= "Message: " . $message . "\n";
                 
-                $headers = "From: noreply@nayesha.com\r\n";
+                $headers = "From: noreply@nayesha.in\r\n";
                 $headers .= "Reply-To: " . $email . "\r\n";
                 
                 @mail($to, $subject, $email_message, $headers);
