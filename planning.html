@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Planning & Designing | Nayesha Healthcare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            --primary-blue: #007eca;
+            --primary-red: #c5161d;
+            --dark-navy: #0a192f;
+            --accent-light: #f0f7ff;
+        }
+        body { font-family: 'Open Sans', sans-serif; color: #444; overflow-x: hidden; }
+        
+         /* Updated Navbar Brand Color */
+        .navbar-brand { font-weight: 800; color: #007eca; letter-spacing: -1px; }
+        
+        /* Updated Button Primary Color */
+        .btn-primary { background-color: #007eca; border: none; padding: 12px 30px; border-radius: 8px; }
+        .btn-primary:hover { background-color: #007eca; }
+
+        /* Parent submenu */
+.dropdown-submenu{
+position:relative;
+}
+
+/* Submenu positioning */
+.dropdown-submenu > .dropdown-menu{
+position:absolute;
+top:0;
+left:100%;
+margin-top:0;
+margin-left:0.1rem;
+display:none;
+border-radius:6px;
+}
+
+/* Show submenu smoothly */
+.dropdown-submenu:hover > .dropdown-menu{
+display:block;
+}
+
+/* Arrow icon for submenu 
+.dropdown-submenu > .dropdown-toggle::after{
+content:"\f105";
+font-family:"Font Awesome 6 Free";
+font-weight:900;
+border:none;
+float:right;
+margin-top:4px;
+}*/
+
+/* Prevent submenu overlap */
+.dropdown-menu li{
+position:relative;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover{
+background:#f8f9fa;
+padding-left:18px;
+transition:0.3s;
+}
+        .contact-btn{
+background:#007eca;
+color:#fff;
+padding:10px 20px;
+border-radius:10px;
+font-weight:600;
+border:none;
+}
+
+.contact-btn:hover{
+background:#007eca;
+}
+        /* Header and Navbar */
+.ls-2 { letter-spacing: 2px; }
+
+.page-header {
+    background: linear-gradient( rgba(0, 102, 153, 0.85)), 
+                url('https://www.draeger.com/Media/Content/Content/Hospital-Planning-3-2-D-17292-2019.JPG');
+  background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+            height: 350px;
+}
+        /* Section Padding & Cards */
+        .section-padding { padding: 90px 0; 
+       }
+       .section-padding .btn{
+        background: white;
+        text:var(--primary-red)
+       }
+        .service-card {
+            border: none;
+            border-radius: 25px;
+            background: #fff;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.07);
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            transition: all 0.4s ease;
+        }
+        .service-card:hover { transform: translateY(-15px); }
+        .card-img-top { height: 220px; object-fit: cover; }
+        .card-body-custom { padding: 35px; }
+
+        .icon-badge {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-light);
+            color:  #007eca;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        /* SMART Solutions Section */
+        .smart-wrapper {
+            background:  #007eca;
+            border-radius: 40px;
+            padding: 60px;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+        .smart-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 300px; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .check-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .check-list i { color: #fff; margin-right: 12px; font-size: 20px; }
+
+        footer { background: #0a192f; color: white; padding: 60px 0 20px; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+          <style>
+    .logo{
+          height: 55px;
+
+    }
+</style>
+        <!-- Logo Image -->
+        <a class="navbar-brand" href="#">
+<img src="Trust & Legacy Focus.webp" class="logo">
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link active  text-brand" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="planning.html">Hospital Planning & Designing</a></li>
+                        <li><a class="dropdown-item" href="manage.html">Hospital Management Outsourcing</a></li>
+                        <li><a class="dropdown-item" href="acc.html">Accrediations</a></li>
+                       
+                    </ul>
+                </li>
+              
+  <!-- achievemnt DROPDOWN -->
+<li class="nav-item dropdown">
+
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+Achievement
+</a>
+
+<ul class="dropdown-menu shadow border-0">
+ <li><a class="dropdown-item" href="achiev.html">Achievement</a></li>
+<!-- FIRST NESTED -->
+<li class="dropdown-submenu">
+    
+<a class="dropdown-item dropdown-toggle" href="#">Latest Projects</a>
+
+<ul class="dropdown-menu">
+               
+                <li><a class="dropdown-item" href="revival-hospital-thane.html">Revival Hospital, Thane</a></li>
+                <li><a class="dropdown-item" href="dhule-clinic.html">Dhule Clinic</a></li>
+</ul>
+</li>
+
+<!-- SECOND NESTED -->
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#">Ongoing-Project</a>
+
+<ul class="dropdown-menu">
+     <li><a class="dropdown-item" href="shree-hospital-karad.html">Shree Hospital, Karad</a></li>
+                <li><a class="dropdown-item" href="new-life-hospital.html">New Life Hospital</a></li>
+                <li><a class="dropdown-item" href="shree-swami-samarth.html">Shree Swami Samarth Prathishthan</a></li>
+                <li><a class="dropdown-item" href="lions-club-alibaug.html">Lions Club Alibaug</a></li>
+                <li><a class="dropdown-item" href="act-raj-hospital-parali.html">ACT Raj Hospital,Parali</a></li>
+             
+</ul>
+</li>
+
+
+</ul>
+</li>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+
+                  
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <!-- Contact Button -->
+<li><button class="btn contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Book Appointment
+</button></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--popup-->
+    <!-- Contact Popup Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="Enter your name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" placeholder="Enter phone number">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<section class="page-header py-5 text-center text-white">
+        <div class="container py-4">
+            <h2 class="display-3 fw-bold">Hospital Planning & Designing</h2>
+        </div>
+        </div>
+    </section>
+    
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4 text-black">Hospital Planning & <span>Designing</span></h2><style>.container span{color:#c5161d}</style>
+                    <p class="fs-5 text-muted mb-4">
+                        Our end-to-end turnkey solutions give investors a massive advantage, resulting in optimal return on investment, better healthcare services for patients, and conservation of natural resources.
+                    </p>
+                    <p class="fs-5 text-muted mb-4">
+                        We blend years of expertise with state-of-the-art automation to provide a distinct competitive edge in the healthcare industry.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-5 shadow-lg" alt="Hospital Blueprint">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-brand fw-bold text-uppercase">Our Core Expertise</h6><style>.container h6{color: #c5161d;} .container h4{color: black;}</style>
+                <h2 class="display-5 fw-bold text-black">Comprehensive <span>Project Solutions</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://scontent.fklh3-1.fna.fbcdn.net/v/t39.30808-6/469248516_18330850801156030_9033292019482837068_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=o7o_6KDChG0Q7kNvwGFHSZ7&_nc_oc=AdqQdKPjq7DkIjxyJNuXTfeBOUr0ZIPfJuQ5pe16IPtjnjE-MTzqwI34Gq9S3n9g8QZpBblGIiOwWlCZg4Q37fZt&_nc_zt=23&_nc_ht=scontent.fklh3-1.fna&_nc_gid=Z8YM6Se5DtQvZS8RAJqX4A&_nc_ss=7a389&oh=00_Af1K4E9SY_uPz9DEU-VhtmVO_F1zkftVxngj-zgbkaNN7w&oe=69ECE0B2" class="card-img-top" alt="Site Selection">
+                        <div class="card-body-custom">
+                            
+                            <h4 class="fw-bold">Site Analysis & Selection</h4>
+                            <p class="text-muted small">Detailed feasibility studies analyzing accessibility, infrastructure, and geographical conditions to ensure optimal profitability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa3iB_dgA6eTGxfmTxIkfXdpHnW6s14uEV9A&s" class="card-img-top" alt="Financial Analysis">
+                        <div class="card-body-custom">
+                            
+                            <h4 class="fw-bold">Financial Analysis</h4>
+                            <p class="text-muted small">Managing hospital funding, investor sourcing, and debt optimization with clear pictures of ROI and viability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Infrastructure">
+                        <div class="card-body-custom">
+                           
+                            <h4 class="fw-bold">Infrastructure Execution</h4>
+                            <p class="text-muted small">Partnerships with expert architects for meticulous planning and scalable solutions tailored for modern healthcare.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Quality Consulting">
+                        <div class="card-body-custom">
+                           
+                            <h4 class="fw-bold">Quality Consulting</h4>
+                            <p class="text-muted small">Leading NABH consultants in India assisting with mandatory procedures, documentation, and patient care norms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="JCI">
+                        <div class="card-body-custom">
+                            
+                            <h4 class="fw-bold">World-Class Standards</h4>
+                            <p class="text-muted small">One of the few firms with JCI accreditation expertise, ensuring truly world-class patient care framework.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="smart-wrapper shadow-lg">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-7">
+                        <h2 class="display-6 fw-bold mb-4">Operational & Functional Management</h2>
+                        <p class="lead mb-4">Our SMART solution encompasses advanced automation for seamless operational management.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled check-list">
+                                    <li><i class="bi bi-check2-circle"></i> Inventory & Re-order Automation</li>
+                                    <li><i class="bi bi-check2-circle"></i> Manpower & Salary Mgmt</li>
+                                    <li><i class="bi bi-check2-circle"></i> Workflow Optimization</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled check-list">
+                                    <li><i class="bi bi-check2-circle"></i> Error-free Patient Billing</li>
+                                    <li><i class="bi bi-check2-circle"></i> Treatment & History Records</li>
+                                    <li><i class="bi bi-check2-circle"></i> Enhanced ROI & Profitability</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="tel:+918454831188" class="btn  text-danger btn-lg rounded-pill px-5 mt-3 fw-bold">Contact Specialist</a>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=600" class="img-fluid rounded-4 shadow" alt="SMART Solutions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="footer-logo mb-3">
+                      <div class="footer-logo-wrapper" style="display: flex; align-items: center; margin-bottom: 20px; gap: 10px;">
+          <!-- Image Tag: Yahan apni logo file ka path daalein -->
+          <img src="Trust & Legacy Focus.webp" alt="nayesha Logo" style="height: 50px; width: auto;">
+          <div class="logo-text" style="font-size: 24px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+            
+          </div>
+        </div>
+
+                </div>
+                    <p class="text-white-50">Transforming healthcare infrastructure and management with 10+ years of domain expertise.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hospital Designing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">NABH Accreditation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">HR Recruitment</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <p class="mb-1 text-white-50"><i class="bi bi-geo-alt me-2"></i> Office 14, 2nd Floor, Hiranandani Crystal Plaza,<br> Plot no 18/27, Sector 07, Kharghar, Panvel, Maharashtra 410210</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-envelope me-2"></i> info@nayesha.com</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-telephone me-2"></i> +91 8454831188</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50 pt-3">
+                <small>© 2026 Nayesha Healthcare Pvt. Ltd. </small><style>.text-center small{color: white;}</style>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

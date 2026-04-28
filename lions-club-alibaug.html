@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lions Club Alibaug | Nayesha Healthcare</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #003d80;
+            --accent-light: #e7f1ff;
+            --Red: #c5161d;
+            --Blue: #007eca;
+        }
+        
+        .text-brand { color: #007eca !important; }
+        .bg-brand { background-color: #007eca !important; }
+        body { font-family: 'Open Sans', sans-serif; }
+        
+        .section-padding { padding: 80px 0; }
+        .navbar-brand { font-weight: 800; color: #007eca; letter-spacing: -1px; }
+        .btn-primary { background-color: #007eca; border: none; padding: 12px 30px; border-radius: 8px; }
+        
+         /* Parent submenu */
+.dropdown-submenu{
+position:relative;
+}
+
+/* Submenu positioning */
+.dropdown-submenu > .dropdown-menu{
+position:absolute;
+top:0;
+left:100%;
+margin-top:0;
+margin-left:0.1rem;
+display:none;
+border-radius:6px;
+}
+
+/* Show submenu smoothly */
+.dropdown-submenu:hover > .dropdown-menu{
+display:block;
+}
+
+/* Arrow icon for submenu 
+.dropdown-submenu > .dropdown-toggle::after{
+content:"\f105";
+font-family:"Font Awesome 6 Free";
+font-weight:900;
+border:none;
+float:right;
+margin-top:4px;
+}*/
+
+/* Prevent submenu overlap */
+.dropdown-menu li{
+position:relative;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover{
+background:#f8f9fa;
+padding-left:18px;
+transition:0.3s;
+}
+        
+        .contact-btn {
+            background: #007eca;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
+        }
+        
+        .contact-btn:hover {
+            background: #005fa3;
+        }
+        
+        .logo {
+            height: 55px;
+        }
+        
+        .project-hero {
+            background: linear-gradient(rgba(0, 102, 153, 0.85), rgba(0, 102, 153, 0.85)),
+                        url('3 lions.jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: white;
+            text-align: center;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .project-hero p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .overview-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .overview-card{
+    background:#f8f9fa;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    border-left:5px solid  #007eca;
+}
+        
+        .overview-card h3 {
+            color: #007eca;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .overview-card p {
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .gallery-section {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .gallery-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        
+        .gallery-title span {
+            color: #c5161d;
+        }
+        
+        .gallery-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 300px;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 119, 182, 0.85);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        
+        .gallery-overlay h5 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .gallery-overlay p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+        
+        .featured-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+        
+        .featured-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .featured-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+            height: 400px;
+        }
+        
+        .featured-item:nth-child(2),
+        .featured-item:nth-child(3) {
+            height: 185px;
+        }
+        
+        .featured-item:nth-child(4),
+        .featured-item:nth-child(5),
+        .featured-item:nth-child(6) {
+            height: 200px;
+        }
+        
+        .featured-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .featured-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .featured-item:hover .featured-img {
+            transform: scale(1.1);
+        }
+        
+        .featured-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 119, 182, 0.85);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .featured-item:hover .featured-overlay {
+            opacity: 1;
+        }
+        
+        .featured-overlay h5 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .highlights-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #007eca 0%, #005fa3 100%);
+            color: white;
+        }
+        
+        .highlight-card {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .highlight-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .highlight-card h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .highlight-card p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+        }
+        
+        .stats-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #007eca;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            background: rgba(0, 102, 153, 0.85);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        
+        .cta-section span {
+            color: #c5161d;
+        }
+        
+        .cta-btn {
+            margin-top: 30px;
+            padding: 18px 45px;
+            border: none;
+            background: white;
+            color: #c5161d;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background: #0a192f;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .project-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .featured-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-item:nth-child(1) {
+                grid-column: span 1;
+                grid-row: span 1;
+                height: 250px;
+            }
+            
+            .featured-item:nth-child(2),
+            .featured-item:nth-child(3) {
+                height: 250px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+          <style>
+    .logo{
+          height: 55px;
+
+    }
+</style>
+        <!-- Logo Image -->
+        <a class="navbar-brand" href="#">
+<img src="Trust & Legacy Focus.webp" class="logo">
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="planning.html">Hospital Planning & Designing</a></li>
+                        <li><a class="dropdown-item" href="manage.html">Hospital Management Outsourcing</a></li>
+                        <li><a class="dropdown-item" href="acc.html">Accrediations</a></li>
+                       
+                    </ul>
+                </li>
+              
+  <!-- achievemnt DROPDOWN -->
+<li class="nav-item dropdown">
+
+<a class="nav-link dropdown-toggle active  text-brand" href="#" data-bs-toggle="dropdown">
+Achievement
+</a>
+
+<ul class="dropdown-menu shadow border-0">
+<li><a class="dropdown-item" href="achiev.html">Achievement</a></li>
+<!-- FIRST NESTED -->
+<li class="dropdown-submenu">
+     
+<a class="dropdown-item dropdown-toggle" href="#">Latest Projects</a>
+
+<ul class="dropdown-menu">
+               
+                <li><a class="dropdown-item" href="revival-hospital-thane.html">Revival Hospital, Thane</a></li>
+                <li><a class="dropdown-item" href="dhule-clinic.html">Dhule Clinic</a></li>
+</ul>
+</li>
+
+<!-- SECOND NESTED -->
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#">Ongoing-Project</a>
+
+<ul class="dropdown-menu">
+     <li><a class="dropdown-item" href="shree-hospital-karad.html">Shree Hospital, Karad</a></li>
+                <li><a class="dropdown-item" href="new-life-hospital.html">New Life Hospital</a></li>
+                <li><a class="dropdown-item" href="shree-swami-samarth.html">Shree Swami Samarth Prathishthan</a></li>
+                <li><a class="dropdown-item" href="lions-club-alibaug.html">Lions Club Alibaug</a></li>
+                <li><a class="dropdown-item" href="act-raj-hospital-parali.html">ACT Raj Hospital,Parali</a></li>
+                
+</ul>
+</li>
+
+
+</ul>
+</li>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+
+                  
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <!-- Contact Button -->
+<li><button class="btn contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Book Appointment
+</button></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="project-hero">
+        <div class="container">
+            <h1>Lions Club Alibaug</h1>
+            <p>Building a Community-Centric, Sustainable Healthcare Institution</p>
+        </div>
+    </section>
+
+     <section class="about-project section-padding">
+<div class="container">
+
+<h2 class="text-center text-brand mb-4">About the Project</h2>
+
+<p>
+The Lions Club Hospital in Alibaug is a visionary initiative by the dedicated members of Lions Club Alibaug, aimed at providing accessible and quality healthcare services to the surrounding rural and semi-urban communities. Recognizing the growing need for organized healthcare infrastructure in the region, the project was conceived as a 50-bedded hospital focused on affordability, accessibility, and long-term sustainability.
+Nayesha Healthcare was entrusted as a strategic partner to support the planning and development of this important healthcare initiative. From the early stages, the focus was on creating a hospital that not only serves the community effectively but also operates on a financially sustainable model, ensuring continuity of services without overdependence on donations.
+</p>
+
+<p>
+Nayesha Healthcare is actively involved in market planning and feasibility analysis, helping the trust understand the healthcare demand, service gaps, and optimal positioning of the hospital in the region. This ensures that the hospital is designed to meet real community needs while maintaining operational viability.
+A key component of the engagement includes financial modeling and project structuring, enabling the trust to make informed decisions regarding investment, phasing, and long-term sustainability. The approach focuses on balancing social objectives with practical financial planning.
+</p>
+
+<p>
+In addition, Nayesha Healthcare is leading the departmental planning and medical planning, ensuring that all clinical services are strategically selected, properly zoned, and aligned with patient flow and efficiency. Detailed equipment planning and procurement guidance is also being provided to ensure optimal utilization of resources and cost-effective investments.
+</p>
+
+<p>
+Through a structured and holistic approach, Nayesha Healthcare is helping shape Lions Club Hospital into a well-planned, community-focused, and sustainable healthcare institution, capable of delivering quality care to underserved populations.
+</p>
+
+</div>
+</section>
+<style>
+    .about-project{
+background:#f8f9fa;
+}
+
+.about-project p{
+font-size:16px;
+line-height:1.8;
+color:#555;
+margin-bottom:15px;
+}
+
+.section-padding{
+padding:70px 0;
+}
+</style>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-title">
+                <h2>Gallery & <span>Facilities</span></h2>
+                <p>Explore the modern infrastructure and facilities at Lions Club Alibaug</p>
+            </div>
+
+            <div class="featured-gallery">
+                <div class="featured-item">
+                    <img src="3 lions.jpeg" class="featured-img" alt="Facility Exterior">
+                    
+                </div>
+                <div class="featured-item">
+                    <img src="lions club alibaug 1 (1).jpeg" class="featured-img" alt="Facility View 1">
+                    
+                </div>
+                <div class="featured-item">
+                    <img src="lions.jpeg" class="featured-img" alt="Facility View 2">
+                   
+                </div>
+                <div class="featured-item">
+                    <img src="lions club alibaug 1 (3).jpeg" class="featured-img" alt="Facility View 3">
+                    
+                </div>
+                <div class="featured-item">
+                    <img src="lions club alibaug 1 (4).jpeg" class="featured-img" alt="Facility View 4">
+                    
+                </div>
+                 <div class="featured-item">
+                    <img src="lion4.jpeg" class="featured-img" alt="Facility View 4">
+                     
+                </div>
+            </div>
+
+            
+            </div>
+        </div>
+    </section>
+
+    <section class="highlights-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Community Focused</h4>
+                        <p>Dedicated to serving the community with quality healthcare</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h4>Expert Doctors</h4>
+                        <p>Highly qualified and experienced medical professionals</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Quality Assured</h4>
+                        <p>Certified for quality standards and patient safety</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Hospital Beds</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Medical Staff</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Departments</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-box">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Emergency Services</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Healthcare Facility?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">Partner with Nayesha Healthcare for comprehensive hospital planning, design, and management solutions</p>
+            <button class="cta-btn" data-bs-toggle="modal" data-bs-target="#contactModal">Get Started Today</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                   <div class="footer-logo mb-3">
+                      <div class="footer-logo-wrapper" style="display: flex; align-items: center; margin-bottom: 20px; gap: 10px;">
+          <!-- Image Tag: Yahan apni logo file ka path daalein -->
+          <img src="Trust & Legacy Focus.webp" alt="nayesha Logo" style="height: 50px; width: auto;">
+          <div class="logo-text" style="font-size: 24px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+            
+          </div>
+        </div>
+
+                </div>
+                    <p class="text-white-50">Transforming healthcare infrastructure and management with 10+ years of domain expertise.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="planning.html">Hospital Planning</a></li>
+                        <li class="mb-2"><a href="manage.html">Hospital Management</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <p class="mb-1 text-white-50"><i class="bi bi-geo-alt me-2"></i>Office 14, 2nd Floor, Hiranandani Crystal Plaza, Plot no 18/27, Sector 07, Kharghar, Panvel, Maharashtra 410210</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-envelope me-2"></i>info@nayesha.com</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-telephone me-2"></i>+91 8454831188</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50 pt-3">
+                <small>© 2026 Nayesha Healthcare Pvt. Ltd. | All Rights Reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

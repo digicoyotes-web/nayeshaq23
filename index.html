@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nayesha Healthcare | Quality Care With Personal Touch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #003d80;
+            --accent-light: #e7f1ff;
+             --Red: #c5161d;
+            --Blue: #007eca;
+            
+        }
+         .text-brand { color: #007eca !important; }
+        .bg-brand { background-color: #007eca !important; }
+        body { font-family: 'Open Sans', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            padding: 120px 0 80px;
+        }
+        .section-padding { padding: 80px 0; }
+        .navbar-brand { font-weight: 800; color: #007eca; letter-spacing: -1px; }
+        .btn-primary { background-color: #007eca; border: none; padding: 12px 30px; border-radius: 8px; }
+       /* Parent submenu */
+.dropdown-submenu{
+position:relative;
+}
+
+/* Submenu positioning */
+.dropdown-submenu > .dropdown-menu{
+position:absolute;
+top:0;
+left:100%;
+margin-top:0;
+margin-left:0.1rem;
+display:none;
+border-radius:6px;
+}
+
+/* Show submenu smoothly */
+.dropdown-submenu:hover > .dropdown-menu{
+display:block;
+}
+
+/* Arrow icon for submenu 
+.dropdown-submenu > .dropdown-toggle::after{
+content:"\f105";
+font-family:"Font Awesome 6 Free";
+font-weight:900;
+border:none;
+float:right;
+margin-top:4px;
+}*/
+
+/* Prevent submenu overlap */
+.dropdown-menu li{
+position:relative;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover{
+background:#f8f9fa;
+padding-left:18px;
+transition:0.3s;
+}
+.contact-btn{
+background:#007eca;
+color:#fff;
+padding:10px 20px;
+border-radius:10px;
+font-weight:600;
+border:none;
+}
+
+.contact-btn:hover{
+background:#007eca;
+}
+
+/* Custom Dark Blue Section Theme */
+.bg-brand-dark {
+    background-color: #007eca !important;
+    color: #ffffff !important;
+}
+
+/* Service Card adjustments for Dark Background */
+.bg-brand-dark .service-card {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #ffffff !important;
+}
+
+.bg-brand-dark .service-card h4 {
+    color: #ffffff;
+}
+
+.bg-brand-dark .service-card .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important; /* Lighter text for readability */
+}
+
+.bg-brand-dark .icon-box {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff !important;
+}
+
+/* Client Section Adjustments */
+.bg-brand-dark .client-logo-wrapper {
+    background: rgba(255, 255, 255, 1); /* White background for logos to pop */
+    border-radius: 12px;
+    filter: none; /* Remove grayscale for better visibility */
+    opacity: 1;
+}
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-light);
+            color:#007eca;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+.project-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 119, 182, 0.8); /* Adjust color/opacity as needed */
+    
+    /* THE CENTERING MAGIC */
+    display: flex;
+    flex-direction: column;   /* Stack H5 and Button vertically */
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;
+    
+    /* Smooth transition (Optional) */
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Show overlay on hover */
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Ensure the image fills the card */
+.project-img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+
+
+         /* Projects Section */
+        .project-item { position: relative; overflow: hidden; border-radius: 15px; cursor: pointer; }
+        .project-img { width: 100%; height: 300px; object-fit: cover; transition: transform 0.5s ease; }
+        .project-overlay {
+          position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 119, 182, 0.8); /* Adjust color/opacity as needed */
+    
+    /* THE CENTERING MAGIC */
+    display: flex;
+    flex-direction: column;   /* Stack H5 and Button vertically */
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
+    text-align: center;
+    
+    /* Smooth transition (Optional) */
+    opacity: 0;
+    transition: all 0.3s ease;
+        }
+         .project-overlay h5,span{
+            align-items: center;
+         }
+        .project-item:hover .project-overlay { opacity: 1; }
+        .project-item:hover .project-img { transform: scale(1.1); }
+        /* Clients Section */
+        .client-logo-wrapper {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+        }
+        .client-logo-wrapper:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+        .client-logo { max-width: 150px; max-height: 60px; object-fit: contain; }
+
+        .stats-box { background: #007eca; color: white; border-radius: 20px; padding: 40px; }
+        .testimonial-card { font-style: italic; border-left: 5px solid #007eca; background: #f8f9fa; padding: 20px; }
+        .blog-card img { border-radius: 10px; height: 200px; object-fit: cover; }
+        footer { background: #0a192f; color: white; padding: 60px 0 20px; }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#main-nav">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+          <style>
+    .logo{
+          height: 55px;
+
+    }
+</style>
+        <!-- Logo Image -->
+        <a class="navbar-brand" href="#">
+<img src="Trust & Legacy Focus.webp" class="logo">
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-semibold">
+                    <li class="nav-item"><a class="nav-link active  text-brand" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="planning.html">Hospital Planning & Designing</a></li>
+                        <li><a class="dropdown-item" href="manage.html">Hospital Management Outsourcing</a></li>
+                        <li><a class="dropdown-item" href="acc.html">Accrediations</a></li>
+                       
+                    </ul>
+                </li>
+              
+  <!-- achievemnt DROPDOWN -->
+<li class="nav-item dropdown">
+
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+Achievement
+</a>
+
+<ul class="dropdown-menu shadow border-0">
+<li><a class="dropdown-item" href="achiev.html">Achievement</a></li>  
+<!-- FIRST NESTED -->
+<li class="dropdown-submenu">
+  
+<a class="dropdown-item dropdown-toggle" href="#">Latest Projects</a>
+
+<ul class="dropdown-menu">
+                
+                <li><a class="dropdown-item" href="revival-hospital-thane.html">Revival Hospital, Thane</a></li>
+                <li><a class="dropdown-item" href="dhule-clinic.html">Dhule Clinic</a></li>
+</ul>
+</li>
+
+<!-- SECOND NESTED -->
+<li class="dropdown-submenu">
+<a class="dropdown-item dropdown-toggle" href="#">Ongoing-Project</a>
+
+<ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="shree-hospital-karad.html">Shree Hospital, Karad</a></li>
+                <li><a class="dropdown-item" href="new-life-hospital.html">New Life Hospital</a></li>
+                <li><a class="dropdown-item" href="shree-swami-samarth.html">Shree Swami Samarth Prathishthan</a></li>
+                <li><a class="dropdown-item" href="lions-club-alibaug.html">Lions Club Alibaug</a></li>
+                <li><a class="dropdown-item" href="act-raj-hospital-parali.html">ACT Raj Hospital,Parali</a></li>
+               
+</ul>
+</li>
+
+
+</ul>
+</li>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
+
+                  
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <!-- Contact Button -->
+<li><button class="btn contact-btn" data-bs-toggle="modal" data-bs-target="#contactModal">
+    Book Appointment
+</button></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--popup-->
+<!-- Contact Popup Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="full_name" class="form-control" placeholder="Enter your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" name="phone_number" class="form-control" placeholder="Enter phone number" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-control" rows="3" placeholder="Your message"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<style>
+    .consultation-modal{
+border-radius:15px;
+padding:10px;
+}
+
+.consultation-modal .modal-header{
+border-bottom:none;
+}
+
+.consultation-modal .btn-primary{
+background:#007eca;
+border:none;
+}
+
+.consultation-modal .btn-primary:hover{
+background:#005fa3;
+}
+    .container span,h6,i{
+        color:#c5161d;
+    }
+</style>
+    <section id="home" class="hero-gradient">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-subtle mb-3 px-3 py-2 rounded-pill">Transforming Healthcare Experience</span>
+                    <h2 class="display-5 fw-bold mb-4">Your Dream Hospital,<br> <span>Our Complete Responsibility </span></h2>
+                    <p class=" mb-4">We partner with you at every step — designing, building, optimizing, and scaling your healthcare institution that deliver both quality care and sustainable growth. </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                       <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#vcConsultationModal">
+    Book a Free VC Consultation
+</button>
+                        <a href="#" class="btn btn-primary btn-lg">Talk to Our Expert</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1000" class="img-fluid rounded-4 shadow-lg" alt="Healthcare Excellence">
+                        <div class="position-absolute bottom-0 start-0 m-4 p-3 bg-white rounded-3 shadow-sm d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-3 me-2"></i>
+                            <div>
+                                <h6 class="mb-0 fw-bold">NABH/NABL</h6>
+                                <small class="text-muted">Accreditation Support</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--popup-->
+<!-- VC Consultation Popup Modal -->
+<div class="modal fade" id="vcConsultationModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content consultation-modal">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Book Free VC Consultation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="full_name" class="form-control" placeholder="Enter your name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Phone Number</label>
+            <input type="tel" name="phone_number" class="form-control" placeholder="Enter phone number" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Hospital / Organization</label>
+            <input type="text" name="hospital_organization" class="form-control" placeholder="Hospital Name">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Preferred Consultation Date</label>
+            <input type="date" name="preferred_date" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="message" class="form-control" rows="3" placeholder="Tell us about your requirement"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">
+            Book Consultation
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded-4 shadow" alt="Doctor Consultation">
+                </div>
+                <div class="col-lg-7">
+                    <h6 class="fw-bold text-uppercase ls-2">Welcome to Nayesha</h6>
+                    <h2 class="display-5 fw-bold mb-4">Vision Behind <br><span>Nayesha Healthcare</span> </h2>
+                    <p class="mb-4">Nayesha Healthcare is a leading hospital planning and management consultancy based in Navi Mumbai, specializing in creating efficient, compliant, and financially sustainable healthcare institutions.</p>
+                    <p>We partner with hospitals, doctors, and investors to transform healthcare visions into successful, high-performing realities.</p>
+                    <a href="about.html" class="btn">Read More</a><style>.btn{background-color: #007eca; color: white;}
+                                           </style>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+/* Service Card adjustments for Dark Background */
+
+.expert-services{
+background: linear-gradient(rgba(0,87,146,0.85),rgba(0,87,146,0.85)),
+url("hospital-bg.jpg");
+background-size: cover;
+padding:80px 0;
+}
+
+.service-title{
+color:white;
+font-weight:700;
+font-size:36px;
+}
+
+.service-subtitle{
+color:#e6e6e6;
+max-width:700px;
+margin:auto;
+}
+
+.service-card{
+background:#f5f5f5;
+padding:30px;
+border-radius:18px;
+border:2px solid #1c6bb3;
+text-align:center;
+height:100%;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.service-card h4{
+color:#1c6bb3;
+font-size:18px;
+font-weight:600;
+margin-top:10px;
+}
+
+.service-card p{
+font-size:14px;
+color:#444;
+}
+
+.icon{
+font-size:30px;
+color:#1c6bb3;
+margin-bottom:10px;
+
+}
+ .outcome{
+margin-top:15px;
+background:#e69fa1;
+padding:12px 15px;
+border-radius:10px;
+text-align:left;
+border-left:4px solid#c5161d;
+}
+
+.outcome h6{
+font-weight:600;
+color:#1f5f9c;
+margin-bottom:6px;
+font-size:15px;
+}
+
+.outcome ul{
+padding-left:18px;
+font-size:14px;
+margin-bottom:0;
+}
+
+.outcome li{
+margin-bottom:3px;
+color:#444;
+}
+</style>
+<script>
+    document.querySelectorAll(".service-card").forEach(card=>{
+card.addEventListener("mouseenter",()=>{
+card.style.transform="translateY(-8px)";
+});
+
+card.addEventListener("mouseleave",()=>{
+card.style.transform="translateY(0)";
+});
+});
+</script>
+<section class="expert-services py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+<h2 class="service-title">Our Expert Services</h2>
+<p class="service-subtitle">
+Our expertise helps hospitals plan, build and manage high-performance healthcare institutions.
+</p>
+</div>
+
+<div class="row g-4">
+
+<!-- Service 1 -->
+<div class="col-md-6 col-lg-3">
+<div class="service-card">
+<div class="icon">
+<i class="fas fa-hospital"></i>
+</div>
+<h4>Hospital Planning & Infrastructure Design</h4>
+<p>
+We transform your vision into a compliant and future-ready healthcare facility through
+concept development, DPR preparation, architectural planning, departmental zoning,
+equipment planning and regulatory compliant design.
+</p>
+<div class="outcome">
+<h6>Outcome</h6>
+<ul>
+<li>Optimized hospital layout</li>
+<li>Regulatory compliant design</li>
+<li>Efficient patient flow</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Service 2 -->
+<div class="col-md-6 col-lg-3">
+<div class="service-card">
+<div class="icon">
+<i class="fas fa-cogs"></i>
+</div>
+<h4>Hospital Management & Operational Excellence</h4>
+<p>
+We improve hospital performance through management outsourcing,
+SOP implementation, revenue cycle optimization, government scheme integration,
+HR structuring and patient experience improvement.
+</p>
+<div class="outcome">
+<h6>Outcome</h6>
+<ul>
+<li>Improved operational efficiency</li>
+<li>Higher revenue performance</li>
+<li>Better patient satisfaction</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Service 3 -->
+<div class="col-md-6 col-lg-3">
+<div class="service-card">
+<div class="icon">
+<i class="fas fa-shield-alt"></i>
+</div>
+<h4>NABH Accreditation & Quality Systems</h4>
+<p>
+We simplify NABH accreditation with structured implementation including
+gap analysis, documentation development, staff training,
+internal audits and final certification support.
+</p>
+<div class="outcome">
+<h6>Outcome</h6>
+<ul>
+<li>NABH accreditation readiness</li>
+<li>Standardized hospital processes</li>
+<li>Improved patient safety</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- Service 4 -->
+<div class="col-md-6 col-lg-3">
+<div class="service-card">
+<div class="icon">
+<i class="fas fa-robot"></i>
+</div>
+<h4>AI-Driven Healthcare Transformation</h4>
+<p>
+We help hospitals adopt modern technology with AI integration,
+data analytics, smart reporting, automation and digital
+transformation for future-ready healthcare systems.
+</p>
+<div class="outcome">
+<h6>Outcome</h6>
+<ul>
+<li>Data-driven decisions</li>
+<li>Automated workflows</li>
+<li>Technology enabled healthcare</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="fw-bold text-uppercase">Portfolio</h6>
+                <h2 class="display-5 fw-bold">Our Latest <span>Projects</span></h2>
+            </div>
+            <div class="row g-4">
+                
+                <div class="col-md-4">
+                    <a href="revival-hospital-thane.html" style="text-decoration: none;">
+                        <div class="project-item">
+                            <img src="REVIAVALHOME.jpeg" class="project-img" alt="Revival Hospital, Thane">
+                            <div class="project-overlay">
+                                <h5 class="fw-bold">Revival Hospital, Thane</h5>
+                                
+                                <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="dhule-clinic.html" style="text-decoration: none;">
+                        <div class="project-item">
+                            <img src="dhule2.jpeg" class="project-img" alt="Dhule Project">
+                            <div class="project-overlay">
+                                <h5 class="fw-bold">Dhule Clinic</h5>
+                                
+                                <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span><style>.project-item span,h5{color: #fff;
+                                }
+                                
+                                </style>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!--   <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+               
+                <h2 class="display-5 fw-bold">Our Ongoing <span>Projects</span></h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="new-life-hospital.html" style="text-decoration: none;">
+                        <div class="project-item">
+                            <img src="1 new life hospital.jpeg" class="project-img" alt=" New Life Hospital">
+                            <div class="project-overlay">
+                                <h5 class="fw-bold"> New Life Hospital</h5>
+                                
+                                <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="shree-swami-samarth.html" style="text-decoration: none;">
+                        <div class="project-item">
+                            <img src="2 swami.jpeg" class="project-img" alt="Shree Swami Samarth prathishthan">
+                            <div class="project-overlay">
+                                <h5 class="fw-bold">Shree Swami Samarth Prathishthan</h5>
+                                
+                                <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="lions-club-alibaug.html" style="text-decoration: none;">
+                        <div class="project-item">
+                            <img src="3 lions.jpeg" class="project-img" alt=" Lions club Alibaug">
+                            <div class="project-overlay">
+                                <h5 class="fw-bold"> Lions Club Alibaug</h5>
+                                
+                                <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span><style>.project-item span,h5{color: #fff;
+                                }
+                                
+                                </style>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="act-raj-hospital-parali.html" style="text-decoration: none;">
+                        <div class="project-item">
+                            <img src="4 sai.png" class="project-img" alt="ACT Raj Hospital Parali">
+                            <div class="project-overlay">
+                                <h5 class="fw-bold">ACT Raj Hospital,Parali</h5>
+                                
+                                <span class="btn btn-sm btn-light rounded-pill px-3">View Details</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <section id="gallery" class="section-padding" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="fw-bold text-uppercase">Projects</h6>
+                <h2 class="display-5 fw-bold">Explore Our <span>Ongoing Project</span></h2>
+               
+            </div>
+             <div class="row g-4 mb-5">
+                 <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div style="position: relative; height: 250px; overflow: hidden;">
+                            <img src="https://admin.shreehospitalkarad.com:9789/static/FaciliteImages/20230930436701.JPG" style="width: 100%; height: 100%; object-fit: cover;" alt="New Life Hospital">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,119,182,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;" class="gallery-hover">
+                                <a href="shree-hospital-karad.html" class="btn btn-light btn-sm rounded-pill">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-brand">Shree Hospital, Karad</h5>
+                            <p class="card-text text-muted small">Modern multi-specialty healthcare facility with state-of-the-art infrastructure</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">120+ Beds</span>
+                                <span class="badge bg-light text-dark">18+ Departments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+           
+                <!-- New Life Hospital Gallery -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div style="position: relative; height: 250px; overflow: hidden;">
+                            <img src="1 new life hospital.jpeg" style="width: 100%; height: 100%; object-fit: cover;" alt="New Life Hospital">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,119,182,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;" class="gallery-hover">
+                                <a href="new-life-hospital.html" class="btn btn-light btn-sm rounded-pill">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-brand">New Life Hospital</h5>
+                            <p class="card-text text-muted small">Transforming Operations and Driving Sustainable Growth</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">100+ Beds</span>
+                                <span class="badge bg-light text-dark">15+ Departments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shree Swami Samarth Gallery -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div style="position: relative; height: 250px; overflow: hidden;">
+                            <img src="2 swami.jpeg" style="width: 100%; height: 100%; object-fit: cover;" alt="Shree Swami Samarth">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,119,182,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;" class="gallery-hover">
+                                <a href="shree-swami-samarth.html" class="btn btn-light btn-sm rounded-pill">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-brand">Shree Swami Samarth Prathishthan</h5>
+                            <p class="card-text text-muted small">Community-focused healthcare facility with modern infrastructure</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">60+ Beds</span>
+                                <span class="badge bg-light text-dark">10+ Departments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lions Club Alibaug Gallery -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div style="position: relative; height: 250px; overflow: hidden;">
+                            <img src="3 lions.jpeg" style="width: 100%; height: 100%; object-fit: cover;" alt="Lions Club Alibaug">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,119,182,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;" class="gallery-hover">
+                                <a href="lions-club-alibaug.html" class="btn btn-light btn-sm rounded-pill">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-brand">Lions Club Alibaug</h5>
+                            <p class="card-text text-muted small">Community healthcare initiative serving Alibaug with quality medical services</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">50+ Beds</span>
+                                <span class="badge bg-light text-dark">8+ Departments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--ACT Raj Hospital,Parali-->
+               
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                        <div style="position: relative; height: 250px; overflow: hidden;">
+                            <img src="" style="width: 100%; height: 100%; object-fit: cover;" alt="ACT Raj Hospital,Parali">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,119,182,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease;" class="gallery-hover">
+                                <a href="act-raj-hospital-parali.html" class="btn btn-light btn-sm rounded-pill">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold text-brand">ACT Raj Hospital,Parali</h5>
+                            <p class="card-text text-muted small">Community healthcare initiative serving Parali with reliable and quality medical services.</p>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-light text-dark">70+ Beds</span>
+                                <span class="badge bg-light text-dark">11+ Departments</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .gallery-hover {
+            cursor: pointer;
+        }
+        .card:hover .gallery-hover {
+            opacity: 1 !important;
+        }
+    </style>
+
+<section id="clients" class="section-padding bg-brand-dark">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-white display-5">Trusted By 150+ Healthcare Providers</h2>
+            <p class="text-white-50">Join our network of successful hospitals and clinics</p>
+        </div>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 align-items-center justify-content-center">
+            <div class="col"><div class="client-logo-wrapper"><img src="jk.jpeg" class="client-logo" alt="jkwomenhospital"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="life.jpeg" class="client-logo" alt="lifelinepanvel"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="Lokmanya-Hospital.jpg" class="client-logo" alt="Lokmanya-Hospital"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="meto.jpeg" class="client-logo" alt="metro"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="Mumbai-Eye-Care.jpg" class="client-logo" alt="Mumbai-Eye-Care"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="Namaha-Hospital.jpg" class="client-logo" alt="Namaha-Hospital"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="Orchid-Hospital-.jpg" class="client-logo" alt="Orchid-Hospital"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="panaceahospital.jpg" class="client-logo" alt="panaceahospital"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="RCF-Hospital.jpg" class="client-logo" alt="RCF-Hospital"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="saharahospitals.jpg" class="client-logo" alt="saharahospitals"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="Sarthi-Healthcare.jpg" class="client-logo" alt="Sarthi-Healthcare"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="Sarthi-Hopsital.jpg" class="client-logo" alt="Sarthi-Hopsital"></div></div>
+            <div class="col"><div class="client-logo-wrapper"><img src="shivamhospital.jpg" class="client-logo" alt="shivamhospital"></div></div> 
+             <div class="col"><div class="client-logo-wrapper"><img src="Suraj-Hospital.jpg" class="client-logo" alt="Suraj-Hospital"></div></div> 
+              <div class="col"><div class="client-logo-wrapper"><img src="surajhospital.jpg" class="client-logo" alt="surajhospital"></div></div> 
+            </div>
+    </div>
+</section>
+<style>
+    .trusted-section{
+background:#167ab3;
+padding:80px 0;
+text-align:center;
+}
+
+.title{
+color:white;
+font-size:40px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.subtitle{
+color:#cce6f5;
+margin-bottom:50px;
+}
+
+.logo-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:30px;
+justify-items:center;
+}
+
+.logo-card{
+width:200px;
+height:100px;
+background:#f2f2f2;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:10px;
+}
+
+.logo-card img{
+max-width:120%;
+max-height:150px;
+object-fit:contain;
+}
+@media(max-width:992px){
+.logo-grid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+@media(max-width:576px){
+.logo-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+</style>
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center fw-bold mb-5 display-5">Frequently Asked Questions</h2>
+                    <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f1">Can you handle the entire planning process of a hospital?</button></h2>
+                            <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Yes, we handle everything from start to finish with our skilled architectural and technical team.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f2">Do you work outside Maharashtra?</button></h2>
+                            <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Yes, we work on projects across India, including Tier 2 and Tier 3 cities.</div></div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#f3">Can you improve our hospital's profitability?</button></h2>
+                            <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body text-muted">Definitely. We ensure smooth operations and revenue growth through expert management and quality improvement.</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 display-5">Words From <span>Our Customers</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card rounded-4">
+                        <p>"You bring tremendous value. We generated more leads in the last 45 days than the last 2 years!"</p>
+                        <h6 class="mb-0 fw-bold">Felix Everard</h6>
+                        <small class="text-muted">HR, Blue Soft Sol</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card rounded-4">
+                        <p>"Everyone has been great to work with. You're a great partner for our company."</p>
+                        <h6 class="mb-0 fw-bold">Boris Elbert</h6>
+                        <small class="text-muted">Green Tech</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card rounded-4">
+                        <p>"Refined our marketing plans and gave us truly innovative ideas for growth."</p>
+                        <h6 class="mb-0 fw-bold">Ivor Herbert</h6>
+                        <small class="text-muted">Manager, Airlines</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    
+
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h6 class="fw-bold">LATEST NEWS</h6>
+                    <h2 class="fw-bold mb-0 display-5">Our Healthcare <span>Blog</span></h2>
+                </div>
+                <a href="blog.html" class="btn ">View All Posts</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 blog-card">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="NABH">
+                        <div class="card-body px-0">
+                            <small class=" fw-bold">26 Sept 2024</small><style>.container small,a{color: #003d80;} .card-body h5{color: #444;}</style>
+                            <h5 class="fw-bold mt-2">Are you preparing for NABH Accreditation the wrong way?</h5>
+                            <a href="blog.html" class="text-decoration-none fw-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 blog-card">
+                        <img src="https://brandsignages.com/frontend/Images/new/hospital-medical-signages-chennai-7.webp" class="card-img-top" alt="Patient Friendly">
+                        <div class="card-body px-0">
+                            <small class="fw-bold">04 Sept 2024</small>
+                            <h5 class="fw-bold mt-2">How to create a patient-friendly hospital using NABH guidelines?</h5>
+                            <a href="blog.html" class="text-decoration-none fw-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 blog-card">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=600" class="card-img-top" alt="Hospital Management">
+                        <div class="card-body px-0">
+                            <small class="fw-bold">26 Sept 2024</small>
+                            <h5 class="fw-bold mt-2">How far can your hospital go without NABH Accreditation?</h5>
+                            <a href="blog.html" class="text-decoration-none fw-bold">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                     <div class="footer-logo mb-3">
+                      <div class="footer-logo-wrapper" style="display: flex; align-items: center; margin-bottom: 20px; gap: 10px;">
+          <!-- Image Tag: Yahan apni logo file ka path daalein -->
+          <img src="Trust & Legacy Focus.webp" alt="nayesha Logo" style="height: 50px; width: auto;">
+          <div class="logo-text" style="font-size: 24px; font-weight: 700; font-family: 'Poppins', sans-serif;">
+            
+          </div>
+        </div>
+
+                </div>
+                    <p class="text-white-50">Transforming healthcare infrastructure and management with 10+ years of domain expertise.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled text-secondary-emphasis">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hospital Designing</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">NABH Accreditation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">HR Recruitment</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5><style></style>
+                    <p class="mb-1 text-white-50"><i class="bi bi-geo-alt me-2"></i> Office 14, 2nd Floor, Hiranandani Crystal Plaza,<br> Plot no 18/27, Sector 07, Kharghar, Panvel, Maharashtra 410210</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-envelope me-2"></i> info@nayesha.com</p>
+                    <p class="mb-1 text-white-50"><i class="bi bi-telephone me-2"></i> +91 8454831188</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center text-white-50 pt-3"><style>.text-center small{color: white;}</style>
+                <small>© 2026 Nayesha Healthcare Pvt. Ltd. </small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>
